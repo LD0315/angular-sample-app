@@ -11,20 +11,20 @@ export class RecipeService {
 
     private recipes: Recipe[] = [
         new Recipe(
-            'Tasty Schnitzel', 
-            'A super-tasty Schnitzel - just awesome!', 
-            'https://hips.hearstapps.com/del.h-cdn.co/assets/17/39/2048x1024/landscape-1506456246-delish-healthy-chicken-casserole-1.jpg?resize=980:*',
+            'Fresh Seafood Don', 
+            'A super-fresh Seafood Don - just awesome!', 
+            'https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/77806/retina_kaisendon_eyecatch.jpg',
             [
-                new Ingredient('Meat', 1),
-                new Ingredient('French Fries', 20)
+                new Ingredient('Salmon', 1),
+                new Ingredient('Prawn', 3)
             ]),
         new Recipe(
-            'Big Fat Burger', 
+            'Tasty Pork Soup', 
             'What else you need to say?', 
-            'https://hips.hearstapps.com/del.h-cdn.co/assets/17/39/2048x1024/landscape-1506456246-delish-healthy-chicken-casserole-1.jpg?resize=980:*',
+            'https://cont-daidokolog.pal-system.co.jp/system/recipe/4303/img/thumbnail/pc_detail_main_COP10_AK_165.jpg',
             [
-                new Ingredient('Buns', 2),
-                new Ingredient('Meat', 1)
+                new Ingredient('Onion', 2),
+                new Ingredient('Potato', 1)
             ])
       ];
 
@@ -32,6 +32,10 @@ export class RecipeService {
 
       getRecipes() {
           return this.recipes.slice();
+      }
+
+      getRecipe(index: number) {
+          return this.recipes[index];
       }
 
       addIngredientsToShoppingList(ingredients: Ingredient[]) {
